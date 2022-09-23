@@ -10,4 +10,21 @@
 .text
 .global collatz
 collatz:
+    mov %RDI, %RAX
+    cmpq $1, %rDI
+    je uno
+
+    incl    n          
+    movq    %rdi, %rax      
+    andq    $1, %rax        
+    jz      par 
+
     ret
+
+uno:
+
+    ret
+
+par:
+
+impar:
