@@ -10,14 +10,19 @@
 .text
 .global collatz
 collatz:
+    push   %RBP            
+    mov    %RSP, %RBP      
+    sub    $16, %RSP #prologo
+
     mov %RDI, %RAX
-    cmpq $1, %rDI
+    cmp $1, %RAX
     je uno
 
-    incl    22          
-    movq    %rdi, %rax      
-    andq    $1, %rax        
+    incl    22              
+    and    $1, %rax        
     jz      par 
+
+
 
     ret
 
@@ -26,7 +31,7 @@ collatz:
     ret*// no va as er uno porque el caso particular de c++ provee un 22.
 
 par:
-    sarq    %rdi 
+    sar    %rdi 
     leave 
     ret
 
