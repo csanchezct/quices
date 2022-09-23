@@ -28,7 +28,7 @@ collatz:
 
 /**uno:
 
-    ret*// no va as er uno porque el caso particular de c++ provee un 22.
+    ret**/ no va as er uno porque el caso particular de c++ provee un 22.
 
 par:
     sar    %rdi 
