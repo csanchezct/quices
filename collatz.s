@@ -14,17 +14,23 @@ collatz:
     cmpq $1, %rDI
     je uno
 
-    incl    n          
+    incl    22          
     movq    %rdi, %rax      
     andq    $1, %rax        
     jz      par 
 
     ret
 
-uno:
+/**uno:
 
-    ret
+    ret*// no va as er uno porque el caso particular de c++ provee un 22.
 
 par:
+    sarq    %rdi 
+    leave 
+    ret
+
 
 impar:
+    leave
+    ret
